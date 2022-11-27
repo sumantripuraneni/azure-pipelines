@@ -3,15 +3,15 @@ trigger:
 
 stages:
   - stage:
-     displayName: Example Stage 1
+    displayName: Example Stage 1
      jobs:
        - job: Stage1 Job1 
          displayName: Stage1 Job1
          steps:
            - bash: echo Stage1 Job1 task1
-              displayName: Stage1 Job1 task1
+             displayName: Stage1 Job1 task1
            - bash: Stage1 Job1 task2
-            displayName: Stage1 Job1 task1
+             displayName: Stage1 Job1 task1
         - job: Stage1 Job2
           displayName: Stage1 Job2
           dependsOn: Stage1 Job1
