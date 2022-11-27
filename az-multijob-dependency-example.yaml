@@ -1,0 +1,26 @@
+trigger:
+  - main
+
+jobs:
+  - job: Job1
+    displayName: Job 1 
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+      - bash: echo Hello from Job1 and step1
+        displayName: Step1
+      - bash: echo Hello from Job1and step2
+        displayName: Step2
+        dependsOn: Step1
+
+  - job: Job2
+    displayName: Job 2
+    dependsOn: Job1
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+      - bash: echo Hello from Job2 and step1
+        displayName: Step1
+      - bash: echo Hello from Job2 and step2
+        displayName: Step2
+        dependsOn: Step1
