@@ -1,0 +1,17 @@
+trigger:
+  - main
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+ - name: envName1
+   value: value1
+
+steps:
+
+  - script: echo An example task to display text
+    displayName: Script task 01
+
+  - script: echo $(variable.envName1) 
+    displayName: Script task to print variable
