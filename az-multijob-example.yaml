@@ -8,9 +8,9 @@ jobs:
     pool:
       vmImage: ubuntu-latest
     steps:
-      - step: echo Hello from Job1 and step1
+      - script: echo Hello from Job1 and step1
         displayName: Step1
-      - step: echo Hello from Job1and step2
+      - script: echo Hello from Job1and step2
         displayName: Step2
 
     - job: Job2
@@ -18,7 +18,7 @@ jobs:
       pool:
         vmImage: ubuntu-latest
       steps:
-        - step: echo Hello from Job2 and step1
+        - script: echo Hello from Job2 and step1
           displayName: Step1
-        - step: echo Hello from Job2 and step2
+        - script: echo Hello from Job2 and step2
           displayName: Step2
