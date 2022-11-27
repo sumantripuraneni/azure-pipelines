@@ -8,15 +8,15 @@ stages:
       - job: Stage1_Job1 
         displayName: Stage1 Job1
         steps:
-          - bash: echo Stage1 Job1 task1
+          - bash: echo "Stage1 Job1 task1"
             displayName: Stage1 Job1 task1
-          - bash: Stage1 Job1 task2
+          - bash: echo "Stage1 Job1 task2"
             displayName: Stage1 Job1 task1
       - job: Stage1_Job2
         displayName: Stage1 Job2
         dependsOn: Stage1_Job1
         steps:
-          - bash: echo Stage1 Job2 task1
+          - bash: echo "Stage1 Job2 task1"
             displayName: Stage1 Job2 task1
 
   - stage:
@@ -26,13 +26,13 @@ stages:
       - job: Stage2_Job1
         displayName: Stage2 Job1
         steps:
-          - bash: echo Stage2 Job1 task1
+          - bash: echo "Stage2 Job1 task1"
             displayName: Stage2 Job2 task1
       - job: Stage2_Job2
         displayName: Stage2 Job2
         dependsOn: Stage2_Job1
         steps:
-          - bash: echo Stage2 Job2 task1
+          - bash: echo "Stage2 Job2 task1"
             displayName: Stage2 Job2 task1
             
 
