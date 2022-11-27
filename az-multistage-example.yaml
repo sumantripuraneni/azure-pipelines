@@ -2,7 +2,7 @@ trigger:
   - main
 
 stages:
-  - stage:
+  - stage: Example_Stage1
     displayName: Example Stage 1
     jobs:
       - job: Stage1_Job1 
@@ -21,7 +21,7 @@ stages:
 
   - stage:
     displayName: Example Stage 2
-    dependsOn: Example Stage 1
+    dependsOn: Example_Stage1
     jobs:
       - job: Stage2_Job1
         displayName: Stage2 Job1
