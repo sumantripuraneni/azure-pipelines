@@ -13,5 +13,5 @@ steps:
   - script: echo An example task to display text
     displayName: Script task 01
 
-  - script: echo $(variable.envName1) 
+  - script: echo $(envName1) 
     displayName: Script task to print variable
