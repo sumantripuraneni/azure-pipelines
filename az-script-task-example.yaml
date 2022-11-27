@@ -6,7 +6,6 @@ pool:
 
 steps:
 
-- script:
-  echo Hello World!!
+- script: echo Hello World!!
   displayName: Script Task 1
 
