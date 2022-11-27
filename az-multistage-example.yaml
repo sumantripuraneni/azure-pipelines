@@ -5,16 +5,16 @@ stages:
   - stage:
     displayName: Example Stage 1
     jobs:
-      - job: Stage1 Job1 
+      - job: Stage1_Job1 
         displayName: Stage1 Job1
         steps:
           - bash: echo Stage1 Job1 task1
             displayName: Stage1 Job1 task1
           - bash: Stage1 Job1 task2
             displayName: Stage1 Job1 task1
-      - job: Stage1 Job2
+      - job: Stage1_Job2
         displayName: Stage1 Job2
-        dependsOn: Stage1 Job1
+        dependsOn: Stage1_Job1
         steps:
           - bash: echo Stage1 Job2 task1
             displayName: Stage1 Job2 task1
@@ -23,14 +23,14 @@ stages:
     displayName: Example Stage 2
     dependsOn: Example Stage 1
     jobs:
-      - job:
+      - job: Stage2_Job1
         displayName: Stage2 Job1
         steps:
           - bash: echo Stage2 Job1 task1
             displayName: Stage2 Job2 task1
-      - job:
+      - job: Stage2_Job2
         displayName: Stage2 Job2
-        dependsOn: Stage2 Job1
+        dependsOn: Stage2_Job1
         steps:
           - bash: echo Stage2 Job2 task1
             displayName: Stage2 Job2 task1
