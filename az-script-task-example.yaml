@@ -9,3 +9,8 @@ steps:
 - script: echo Hello World!!
   displayName: Script Task 1
 
+- script: |
+  echo Adding first line for multi line task 
+  echo Adding second line for multi line task 
+  displayName: Script Task 2
+
