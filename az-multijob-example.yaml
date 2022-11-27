@@ -13,12 +13,12 @@ jobs:
       - script: echo Hello from Job1and step2
         displayName: Step2
 
-    - job: Job2
-      displayName: Job 2
-      pool:
-        vmImage: ubuntu-latest
-      steps:
-        - script: echo Hello from Job2 and step1
-          displayName: Step1
-        - script: echo Hello from Job2 and step2
-          displayName: Step2
+  - job: Job2
+    displayName: Job 2
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+      - script: echo Hello from Job2 and step1
+        displayName: Step1
+      - script: echo Hello from Job2 and step2
+        displayName: Step2
